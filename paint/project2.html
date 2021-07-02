@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+ <meta charset= "utf-8"/>   
+ <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+   <title>Paint App</title>
+ <link rel="stylesheet" href="style.css">
+
+ </head>
+<body>
+    <div class="field">
+        <canvas id="canvas"></canvas>
+        <div class="tools">
+            <button onClick="clear_canvas()" type="button" class="button">clear</button>
+
+            <div onClick="change_color(this)" class="color-field" style="background: green;"></div>
+            <div onClick="change_color(this)" class="color-field" style="background: red;"></div>
+            <div onClick="change_color(this)" class="color-field" style="background: yellow;"></div>
+            <div onClick="change_color(this)" class="color-field" style="background: blue;"></div>
+
+            <input onInput="draw_color = this.value" type="color"  class="color-selector">
+            <input onInput="draw_width = this.value" type="range" min="1" max="100" class="pen-range">
+        </div>
+    </div>
+
+
+
+    <script src="main.js"></script>
+</body>
+<html>
